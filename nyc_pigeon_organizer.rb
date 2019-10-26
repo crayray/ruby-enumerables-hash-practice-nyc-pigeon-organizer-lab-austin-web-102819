@@ -23,23 +23,19 @@ def nyc_pigeon_organizer(data)
   data.each do |attribute_names, attribute_values| # splitting up the first layer of the hash (which creates a new array for the value)
     attribute_values.each do |attribute, pigeon_names| # Splitting up the attribute and the pigeons in the newly created array
       pigeon_names.each do |names| # Splitting up the names
-        if pigeon_list.has_key? names # If the key is in there,
-          # binding.pry
-          if attribute_values.has_key? attribute
-            # binding.pry
-             pigeon_list[names][attribute_names]= attribute_values.to_s # Create a new array
-         # Add these items to the array
-          end
-          # binding.pry
-        else
+        if !pigeon_list.has_key? names # If the key is in there,
           # binding.pry
           pigeon_list[names] = {} # Create the name as a key to a hash
-          pigeon_list[names][attribute_names] = [attribute.to_s] # insert attribute_names as the key in the hash
-          binding.pry
-          # pigeon_list[names][attribute_names][attribute_values] = [] #insert the attribute values into the array
         end
-
-
+          if !attribute_values.has_key? attribute_names
+            binding.pry
+             pigeon_list[names][attribute_names]= [] # Create a new array
+         # Add these items to the array
+          end
+          if !pigeon_list[names][attribute_names].include? attribute
+            pigeon_list[names][attribute_names] << attribute.to_s
+          end
+          # binding.pry
     end
       # binding.pry
   end
