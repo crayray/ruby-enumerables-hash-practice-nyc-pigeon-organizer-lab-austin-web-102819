@@ -26,7 +26,7 @@ def nyc_pigeon_organizer(data)
         if pigeon_list.has_key? names # If the key is in there,
           # binding.pry
           if attribute_values.has_key? attribute
-            binding.pry
+            # binding.pry
              pigeon_list[names][attribute_names].push(attribute_values.to_s) # Create a new array
          # Add these items to the array
           end
