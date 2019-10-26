@@ -20,13 +20,14 @@ pigeon_data = {
 
 def nyc_pigeon_organizer(data)
   pigeon_list ={} # Create a new hash in which to re-arrange data
-  attributes= []
   data.each do |attribute_names, attribute_values| # splitting up the first layer of the hash (which creates a new array for the value)
     attribute_values.each do |attribute, pigeon_names| # Splitting up the attribute and the pigeons in the newly created array
       pigeon_names.each do |names| # Splitting up the names
         if pigeon_list.has_key? names # If the key is in there,
           # binding.pry
-          pigeon_list[names][attribute_names] ||= [attribute] # Add these items to the array
+          # if attribute_values.has_key? attribute
+          #   pigeon_list[names][attribute_names] = [attribute] # Add these items to the array
+          # end
           # binding.pry
         else
           # binding.pry
@@ -40,7 +41,7 @@ def nyc_pigeon_organizer(data)
       # binding.pry
   end
 end
-pigeon_list
+p pigeon_list
 end
 
 
