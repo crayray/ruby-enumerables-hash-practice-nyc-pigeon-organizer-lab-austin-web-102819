@@ -24,10 +24,10 @@ def nyc_pigeon_organizer(data)
     attribute_values.each do |attribute, pigeon_names| # Splitting up the attribute and the pigeons in the newly created array
       pigeon_names.each do |names| # Splitting up the names
         if pigeon_list.has_key? names # If the key is in there,
-          # binding.pry
-          # if attribute_values.has_key? attribute
-          #   pigeon_list[names][attribute_names] = [attribute] # Add these items to the array
-          # end
+          binding.pry
+          if attribute_values.has_key? attribute
+            pigeon_list[names][attribute_names] = [attribute] # Add these items to the array
+          end
           # binding.pry
         else
           # binding.pry
