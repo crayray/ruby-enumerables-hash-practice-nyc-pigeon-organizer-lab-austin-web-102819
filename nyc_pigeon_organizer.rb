@@ -28,7 +28,7 @@ def nyc_pigeon_organizer(data)
           pigeon_list[names] = {} # Create the name as a key to a hash
         end
           if !attribute_values.has_key? attribute_names
-            binding.pry
+            # binding.pry
              pigeon_list[names][attribute_names]= [] # Create a new array
          # Add these items to the array
           end
