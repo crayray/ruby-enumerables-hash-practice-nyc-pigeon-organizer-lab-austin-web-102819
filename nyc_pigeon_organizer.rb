@@ -40,7 +40,7 @@ def nyc_pigeon_organizer(data)
       # binding.pry
   end
 end
-p pigeon_list
+pigeon_list
 end
 
 
